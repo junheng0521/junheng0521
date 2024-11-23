@@ -1,0 +1,282 @@
+<html lang="en"> 
+<head>
+<title>Japan Tourism</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA_Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="home.css">
+<style>
+/* Style for the options */
+.option {
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffae42;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.option:hover {
+    background-color: #d3d3d3;
+}
+
+/* Content that will be toggled */
+.option-content {
+    background-color: #c7e7ea;
+    display: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+
+/* food */
+
+.food {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.foodimage {
+    position: relative;
+    width: 30%; /* 宽度占据父容器的 30% */
+    height: 300px; /* 设置固定高度 */
+    overflow: hidden; /* 防止图片溢出 */
+}
+
+.foodimage img {
+    width: 100%;
+    height: 100%; /* 高度设置为100%来填充容器 */
+    object-fit: cover; /* 保持图片比例并填充容器，裁剪掉多余部分 */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.foodimage figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    visibility: hidden; /* 默认隐藏文字 */
+    opacity: 0; /* 默认不透明 */
+    transition: visibility 0s, opacity 0.3s ease-in-out; /* 过渡效果 */
+}
+
+.foodimage:hover img {
+    opacity: 0.3; /* 图片变为半透明 */
+}
+
+.foodimage:hover figcaption {
+    visibility: visible; /* 鼠标悬停时显示文字 */
+    opacity: 1; /* 使文字变得完全可见 */
+}
+</style>
+<script>
+
+// JavaScript to toggle content
+function toggleContent(optionId) {
+    var content = document.getElementById(optionId);
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+    } else {
+        content.style.display = "none";
+    }
+}
+</script>
+
+</head>
+<body>
+<header class="header">
+    <a href="home.html" class="logo">Japan</a> 
+
+    <nav class="navbar">
+        <a href="home.html" target="_self" title="主页">Home</a>
+        <a href="Tourism_Packages.html" target="_self" title="旅游和套餐">Tourism and Packages</a>
+        <a href="Accommodation_Meals.html " target="_self" title="住宿和餐饮 ">Accommodation and Meals</a>
+        <a href="Transport.html" target="_self" title="交通">Transport</a>
+        <a href="Seasonal_Changes.html" target="_self" title="季节交换">Seasonal Changes</a>
+        <a href="Contant_Us.html" target="_self" title="联系我们">Contact Us</a>
+    </nav>
+</header>
+
+<br><br><br><br><br><br>
+<h1 align=center style="font-family:Arial;">Accommodation and Meals</h1>
+
+<hr size=6 align=left noshade color=green>
+<br>
+<div class="option" onclick="toggleContent('option1')">
+    Option 1: Accommodation and meals included
+</div>
+
+<div id="option1" class="option-content">
+<p align=justify>Choosing an all-inclusive travel package comes with many thoughtful benefits!  </p><br><br>
+<p align=justify><font size=5> <strong><em>Saves time and effort</em></strong> </font> since accommodation, meals, and activities are all pre-arranged, so you don’t have to stress over planning or bookings—just pack and go.</p> <br><br>
+<p align=justify><font size=5> <strong><em>Transparent pricing</em></strong> </font> ensures you pay a single upfront cost that covers everything you need, avoiding surprise expenses and often being more cost-effective than booking separately.</p> <br><br>
+<p align=justify><font size=5> <strong><em>Diverse and exciting itineraries</em></strong> </font> mean you’ll enjoy guided tours, cultural experiences, and more, without worrying about missing out on key attractions.</p> <br><br>
+<p align=justify><font size=5> <strong><em>Guaranteed quality</em></strong> </font> offers peace of mind, as meals and accommodations are carefully selected for comfort and convenience.</p> <br><br>
+<p align=justify><font size=5> <strong><em>Safety and ease</em></strong> </font> are added perks, with guides or a support team helping you navigate language barriers or transportation issues.</p> <br><br>
+<p align=justify>Plus, there’s the <font size=5> <strong><em></em>social aspect</em></strong> </font>—meeting fellow travelers and sharing unforgettable moments might even lead to lasting friendships! An all-inclusive package makes your trip smoother and more enjoyable, so you can fully focus on soaking in the beauty and culture around you.</p>
+</div>
+
+<hr size=6 align=left noshade color=green>
+
+<br>
+
+<div class="option" onclick="toggleContent('option2')">
+    Option 2: Packaged accommodation
+</div>
+<div id="option2" class="option-content">
+<p align=justify>Choosing a packaged accommodation option can make your trip so much easier and more enjoyable! </p><br><br>
+<p align=justify>It <font size=5> <strong><em>saves time and effort</em></strong> </font> because your lodging, meals, and sometimes even activities are already taken care of—no need to stress over planning or bookings.</p><br><br>
+<p align=justify>With <font size=5> <strong><em>transparent pricing</em></strong> </font>, you pay one upfront cost, so there are no surprise expenses, and it often turns out to be more budget-friendly than organizing everything separately. </p><br><br>
+<p align=justify>These packages also come with <font size=5> <strong><em>exciting and diverse options</em></strong> </font>, like guided tours or unique local experiences, helping you make the most of your trip without missing out.</p><br><br>
+<p align=justify>You’ll also appreciate the <font size=5> <strong><em>quality assurance</em></strong> </font>, as accommodations and meals are carefully selected to ensure a comfortable and hassle-free stay.</p><br><br>
+<p align=justify>They’re incredibly <font size=5> <strong><em>safe and convenient</em></strong> </font>, with professional support available to help with logistics or unexpected hiccups.</p><br><br>
+<p align=justify>Let’s not forget the <font size=5> <strong><em>social perks</em></strong> </font>—you might make new friends and share some unforgettable memories along the way.</p><br><br>
+</div>
+    
+<hr size=6 align=left noshade color=green>
+
+<br>
+
+<div class="option" onclick="toggleContent('option3')">
+    Option 3: Meals included
+</div>
+
+<div id="option3" class="option-content">
+<p align=justify>Choosing a meals included option offers plenty of great benefits.</p><br><br>
+<p align=justify>It provides <font size=5> <strong><em>convenience</em></strong> </font> by eliminating the need to search for meals during your trip, letting you focus on your activities instead.</p><br><br>
+<p align=justify>The <font size=5> <strong><em>cost-effectiveness</em></strong> </font> is another major benefit, as meals are already included in the price, often making it cheaper than dining out for every meal.</p><br><br>
+<p align=justify>It also <font size=5> <strong><em>saves time</em></strong> </font>, as you won’t need to spend time deciding where to eat or wait in long lines at restaurants. </p><br><br>
+<p align=justify>With <font size=5> <strong><em>quality assurance</em></strong> </font>, the meals are carefully selected to ensure they meet a certain standard, allowing you to enjoy consistent, tasty options.</p><br><br>
+<p align=justify>Some packages offer the opportunity to experience local cuisine, giving you a chance to try authentic dishes without extra planning, enhancing your <font size=5> <strong><em>cultural experience</em></strong> </font>. </p><br><br>
+</div>
+    
+
+<hr size=6 align=left noshade color=green>
+
+<br>
+
+<div class="option" onclick="toggleContent('option4')">
+    Option 4: No included meals
+</div>
+
+<div id="option4" class="option-content">
+<p align=justify>Opting for a no meals included option can offer flexibility and freedom during your travels.</p><br><br>
+<p align=justify>The biggest advantage is the <font size=5> <strong><em>freedom of choice</em></strong> </font>, allowing you to explore and try a variety of local restaurants or street food at your own pace.</p><br><br>
+<p align=justify>This option can also be more <font size=5> <strong><em>cost-effective</em></strong> </font> if you prefer to eat at local spots or cook for yourself, especially in destinations where meals outside of hotel restaurants are more affordable.</p><br><br>
+<p align=justify>Without predetermined meals, you also have the <font size=5> <strong><em>flexibility</em></strong> </font> to adjust your eating schedule and preferences, whether you’re in the mood for a quick snack or a leisurely dinner. </p><br><br>
+<p align=justify>It gives you the chance to enjoy a more <font size=5> <strong><em>authentic culinary experience</em></strong> </font>, discovering hidden gems and tasting dishes that may not be offered in a set meal package. </p><br><br>
+<p align=justify>there’s no worry about meal times or restrictions, you’ll need to plan ahead, ensuring you have options nearby, giving you a more <font size=5> <strong><em>personalized and spontaneous</em></strong> </font> experience.</p><br><br>
+</div>
+
+<hr size=6 align=left noshade color=green>
+
+<br><br><br>
+
+
+<section class="Accommodation_Meals">
+
+<div class="food">
+    <div class="foodimage">
+        <img src="food1.jpg" alt="Home">
+            <figcaption align="center">
+                <h2>Dinner</h2>
+                A variety of food of your choice.
+            </figcaption>
+    </div>
+    
+    <div class="foodimage">
+        <img src="food2.jpg" alt="Home">
+        <figcaption align="center">
+            <h2>Breakfast</h2>
+            Delivered straight to the door, so no need to make a special walk to the dining room.
+             </figcaption>
+    </div>
+    <div class="foodimage">
+        <img src="food3.jpg" alt="Home">
+        <figcaption align="center">
+            <h2>Luncheon</h2>
+            A variety of choices, all of which can be more filling conveniently people do not get hungry so quickly while playing.
+        </figcaption>
+    </div>
+    </div>
+
+    <div class="food">
+        <div class="foodimage">
+            <img src="food4.jpg" alt="Home">
+            <figcaption align="center">
+                <h2>Bedroom</h2>
+                There is the option of needing two double beds or one single bed, or a large room if more than one person.            </figcaption>
+        </div>
+        
+        <div class="foodimage">
+            <img src="food5.jpg" alt="Home">
+            <figcaption align="center">
+                <h2>Bathroom </h2>
+                A large bathtub is provided that can be used by two to three people.
+            </figcaption>
+        </div>
+        
+        <div class="foodimage">
+            <img src="food6.jpg" alt="Home">
+            <figcaption align="center">
+                <h2>Spas</h2>
+                When people come back from a trip they can soothe their fatigue by soaking in a hot spring.            </figcaption>
+        </div>
+    </div>
+    
+    <br><br><br> 
+
+<div class="footer">
+    <h2>Quick Links</h2>
+    <ul class="footmenu">
+       <li><a href="home.html">Home</a></li>
+       <li><a href="about best.html">About us</a></li>
+       <li><a href="menu.html">Menu</a></li>
+       <li><a href="register.html">Register</a></li>
+       <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+ </div>
+ 
+ <div class="footer">
+    <h2 >Information Link</h2>
+    <ul class="footmenu">
+       <li><a href="#">News</a></li>
+       <li><a href="#">R&D Policy</a></li>
+       <li><a href="#">Anti-Ragging</a></li>
+       <li><a href="#">Admission</a></li>
+    </ul>
+ </div>
+ <div class="footer">
+    <h2>GET IN TOUCH</h2>
+    <ul class="get-in-touch">
+       <li><i class="fa-solid fa-envelope"></i> E-MAIL:<a href="mailto:best@gmail.com" class="footer-e-mail"> japan@gmail.com</a></li>
+       <li><i class="fa-brands fa-whatsapp"></i> WHATS-APP: +91 -123 456 789</li>
+       <li><i class="fa-solid fa-phone"></i> CONTACT NO.: +91 -(123)-4567890</li>
+       <li><i class="fa-solid fa-globe"></i>WEBSITE:<a href="home.html" class="footer-website"> https://www.japan.com</a></li>
+    </ul>
+    <ul class="social-media">
+       <li><a href="#"><img src="fblogo.jpg"></a></li>
+       <li><a href="#"><img src="Twitterlogo.jpg"></a></li>
+       <li><a href="#"><img src="linelogo.jpg"></a></li>
+       <li><a href="#"><img src="instagramlogo.jpg"></a></li>
+    </ul>
+ </div>
+ </div>
+ </div>
+ <div class="footer2">
+ <p>Copyright @ 2024, japan.com. All Rights Reserved</p>
+ </div>
+ </body>
+ </html>
+

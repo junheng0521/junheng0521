@@ -1,0 +1,379 @@
+/* General Reset and Body Styling */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+body {
+   height:670px;
+   background:url(background4.jpg);
+   background-size:cover;
+   background-position: center;
+   background-attachment: fixed;
+
+
+
+
+   /* contact us */
+.location-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333; /* 默认深灰色 */
+    text-align: center;
+    transition: color 0.3s, transform 0.3s; /* 添加平滑过渡 */
+}
+
+/* Hover 效果 */
+.location-title:hover {
+    color: #ff5869; /* 鼠标悬停时变为红色 */
+    transform: scale(1.1); /* 放大 10% */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+}
+
+.contact{
+   background-image: url(BAKERY\ SHOP.jpg);
+   background-size: cover;
+   padding: 10%;
+}
+
+.contact h1{
+   color: #fff;
+   font-size: 35px;
+}
+
+#contactloca{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.contact th{
+   text-align: left;
+   background-color: rgba(61, 62, 64, 0.84)
+}
+.contact th,td{
+   border: 0px solid;
+   padding: 20px;
+   color: #fff;
+}
+
+
+.contact table{
+   background-color: rgba(0, 0, 0, 0.841);
+   width:auto;
+   height: auto;
+   align-content:end;
+   margin-top: 5%;
+}
+
+.contact h2{
+   text-align: center;
+   color: #fff;
+}
+
+
+
+
+#button1 {
+   color: darkblue;
+   background-color:#fff;
+   border: none;
+   border-radius: 100px;
+   padding: 16px 32px;
+   text-decoration: none;
+   display:inline-block;
+   font-size: 20px;
+   margin: 4px 2px;
+   transition-duration: 0.4s;
+}
+
+#button1:hover{
+   color: aliceblue;
+   background-color:#282626;
+   border: none;
+   border-radius: 100px;
+}
+
+
+/* （上面那一行） */
+.header{ 
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   padding:20px 100px;
+   background:black;
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index:100;
+}
+
+.logo{
+   font-size: 32px;
+   color:rgb(251, 247, 247);
+   text-decoration: none;
+   font-weight:700;
+}
+
+.navbar a {
+   position: relative;
+   font-size:18px;
+   color:aliceblue;
+   font-weight:500;
+   text-decoration:none;
+   margin-left:40px;
+}
+
+ .navbar a::before{
+   content:'';
+   position:absolute;
+   top:100%;
+   left:0;
+   width:0;
+   height:2px;
+   background:white;
+   transition: 0.3s;
+ }
+
+ .navbar a:hover::before{
+   width:100%;
+ }
+
+ .calendar {
+   width: 380px;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+   background: #fff;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   position: relative; /*可以选 */
+}
+
+.calendar-container {
+   display: flex;
+   flex-direction: column; /* 垂直堆叠标题和日历 */
+   align-items: center;
+   width: 1550px;
+   background: rgba(255, 255, 255, 0.9);
+   border-radius: 10px; /* 圆角 */
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* 阴影 */
+   padding: 20px; /* 里面的空间 */
+   margin-top: 100px; /* 避免与固定导航栏重叠 */
+   position: relative; /* 定位 */
+   justify-content: center; /* 使内容居中 */
+}
+
+.calendar-heading {
+   font-size: 24px;
+   font-weight: bold;
+   color: #333; 
+   margin-bottom: 15px; /* 标题与日历之间的空格 */
+   text-align: center; 
+}
+
+.header1{
+   display:flex;
+   justify-content: space-between;
+   align-items:center;
+   padding:10px;
+}
+
+.monthYear{
+   text-align:center;
+   font-weight:600;
+   width:150px;
+}
+
+.header1 button{
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   border:none;
+   border-radius: 50%;
+   background:#fff;
+   cursor: pointer;
+   width:40px;
+   height:40px;
+   box-shadow:0 0 4px rgba(0,0,0,0.2) ;
+}
+
+.days{
+   display: grid;
+   grid-template-columns: repeat(7,1fr);
+}
+
+.day{
+   text-align:center;
+   padding:5px;
+   color:#999FA6;
+   font-weight:500;
+}
+
+.dates {
+   display:grid;
+   grid-template-columns:repeat(7, 1fr);
+   gap:5px;
+}
+
+.date{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   text-align:center;
+   padding:10px;
+   margin:auto;
+   cursor:pointer;
+   font-weight:600;
+   border-radius:50%;
+   width:40px;
+   height:40px;
+   transition: 0.2s;
+}
+
+.date:hover,
+.data.active{
+   background:#ff5869;
+   color: #fff;
+}
+
+.data.inactive{
+   color:#d2d2d2;
+}
+
+.data.inactive:hover{
+   color:#fff;
+}
+
+.container{
+   position:relative;
+   min-height:100vh;
+
+}
+
+.container h1{
+   font-size:40px;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   font-weight:normal;
+   padding:15px;
+   color:#333;
+   text-align:center;
+   text-transform:capitalize;
+}
+
+.container .image-container {
+   display: flex;
+   justify-content: space-around;
+   gap: 20px;
+   margin: 40px 0;
+}
+
+.container .image-container .image {
+   width: 400px;
+   height: 630px;
+   background-color: white;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s, background-color 0.3s;
+   text-align: center;
+   cursor: pointer;
+
+}
+
+.container .image-container .image img {
+   height: 450px; /* Set a specific height for the images */
+   width: 100%;
+   object-fit: cover;
+   transition: .2s linear;
+}
+
+.container .image-container .image:hover img {
+   transform: scale(1.1);
+}
+
+.container .image-container .image figcaption {
+   margin-top: 8px; /* Add some spacing between the image and caption */
+   font-size: 16px;
+   color: #333;
+   font-weight: 500;
+   text-transform: capitalize;
+}
+
+
+ /*footer  */
+
+        .footer{
+            width:25%;
+            float:right;
+
+       }
+       .footer h2 {
+            font-size:18px;
+            font-weight:bold;
+            color:#fff;
+            margin-bottom:10px;
+        }
+
+        .footmenu {
+            list-style:none;
+            padding-left: 10px;
+        }
+        .footmenu li a {
+            color: #fff;
+            line-height: 2.5;
+            font-size: 15px;
+            text-decoration:none;
+        }
+        .social-media {
+            list-style:none;
+            margin-top:10px;
+        }
+        .social-media li a img {
+            width:30px;
+        }
+        .social-media li {
+            float:left;
+            padding:0px 8px;
+        }
+        
+        .get-in-touch {
+            list-style:none;
+            padding-left: 10px;
+        }
+        .get-in-touch li i {
+            color: #ed372c;
+            font-size: 20px;
+        }
+        .get-in-touch li {
+            color: #fff;
+            line-height: 2.5;
+            font-size: 15px;
+            text-decoration:none;
+        }
+        .footer-e-mail {
+            font-size:15px;
+            font-weight:bold;
+            color:#fff;
+            text-decoration:none;
+        }
+        .footer-website {
+            font-size:12px;
+            font-weight:bold;
+            color:#fff;
+            text-decoration:none;
+        }
+        .footer2 {
+            background: black;
+            padding:0;
+            border-top: 1px solid #898989;
+       }
+        .footer2 p{
+            font-size:14px;
+            color:#fff;
+            padding-left: 40%;
+            text-align:left;
+       }

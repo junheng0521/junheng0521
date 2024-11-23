@@ -1,0 +1,234 @@
+<html lang="en"> 
+<head>
+<title>Japan Tourism</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA_Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="home.css">
+<style>
+/* Style for the options */
+.option {
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffae42;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.option:hover {
+    background-color: #d3d3d3;
+}
+
+/* Content that will be toggled */
+.option-content {
+    background-color: #c7e7ea;
+    display: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+
+/* food */
+
+.transport {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.transportimage {
+    position: relative;
+    width: 30%; /* 宽度占据父容器的 30% */
+    height: 300px; /* 设置固定高度 */
+    overflow: hidden; /* 防止图片溢出 */
+}
+
+.transportimage img {
+    width: 100%;
+    height: 100%; /* 高度设置为100%来填充容器 */
+    object-fit: cover; /* 保持图片比例并填充容器，裁剪掉多余部分 */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.transportimage figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    visibility: hidden; /* 默认隐藏文字 */
+    opacity: 0; /* 默认不透明 */
+    transition: visibility 0s, opacity 0.3s ease-in-out; /* 过渡效果 */
+}
+
+.transportimage:hover img {
+    opacity: 0.3; /* 图片变为半透明 */
+}
+
+.transportimage:hover figcaption {
+    visibility: visible; /* 鼠标悬停时显示文字 */
+    opacity: 1; /* 使文字变得完全可见 */
+}
+</style>
+<script>
+
+// JavaScript to toggle content
+function toggleContent(optionId) {
+    var content = document.getElementById(optionId);
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+    } else {
+        content.style.display = "none";
+    }
+}
+</script>
+
+</head>
+
+<header class="header">
+    <a href="home.html" class="logo">Japan</a> 
+
+    <nav class="navbar">
+        <a href="home.html" target="_self" title="主页">Home</a>
+        <a href="Tourism_Packages.html" target="_self" title="旅游和套餐">Tourism and Packages</a>
+        <a href="Accommodation_Meals.html " target="_self" title="住宿和餐饮 ">Accommodation and Meals</a>
+        <a href="Transport.html" target="_self" title="交通">Transport</a>
+        <a href="Seasonal_Changes.html" target="_self" title="季节交换">Seasonal Changes</a>
+        <a href="Contant_Us.html" target="_self" title="联系我们">Contact Us</a>
+    </nav>
+</header>
+
+<br><br><br><br><br><br>
+<h1 align=center style="font-family:Arial;">Transport</h1>
+
+<hr size=6 align=left noshade color=green>
+<br>
+<div class="option" onclick="toggleContent('option1')">
+    Option 1: Transport and Driver Included
+</div>
+
+<div id="option1" class="option-content">
+<p align=justify><font size=5> <strong><em>Saves time and effort:</em></strong></font> With transportation and a driver provided, you don’t need to arrange transportation or worry about routes, saving you a lot of time and energy.</p><br><br>
+<p align=justify><font size=5> <strong><em>Convenient and comfortable:</em></strong></font> A professional driver is familiar with the routes, ensuring you reach your destination quickly and safely, while avoiding the hassle of finding parking or getting lost in an unfamiliar city.</p><br><br>
+<p align=justify><font size=5> <strong><em>Increased safety:</em></strong></font> Experienced drivers know the traffic rules and local conditions, ensuring your safety, especially in busy or complex traffic areas.</p><br><br>
+<p align=justify><font size=5> <strong><em>Reduces stress:</em></strong></font> Long drives or navigating unfamiliar areas can be tiring and stressful, but having a driver with you makes your trip more relaxing and worry-free.</p><br><br>
+<p align=justify><font size=5> <strong><em>Flexibility and customization: </em></strong></font>With a driver, you can adjust your itinerary and the duration of stops based on your preferences, giving you the flexibility to explore attractions and activities at your own pace.</p><br><br>
+</div>
+
+<hr size=6 align=left noshade color=green>
+
+<br>
+
+<div class="option" onclick="toggleContent('option1')">
+    Option 2: Transport Included
+</div>
+
+<div id="option2" class="option-content">
+<p align=justify><font size=5> <strong><em>Avoid getting lost or struggling to find transport:</em></strong></font> When traveling in unfamiliar cities or countries, having transportation pre-arranged removes the worry of language or cultural barriers.</p><br><br>
+<p align=justify><font size=5> <strong><em>Comfort:</em></strong></font> The transportation provided is usually comfortable and suitable for long trips, making your travel experience more relaxing.</p><br><br>
+<p align=justify><font size=5> <strong><em>Increased safety:</em></strong></font> Experienced drivers know the traffic rules and local conditions, ensuring your safety, especially in busy or complex traffic areas.</p><br><br>
+<p align=justify><font size=5> <strong><em>Reduces stress:</em></strong></font> Long drives or navigating unfamiliar areas can be tiring and stressful, but having a driver with you makes your trip more relaxing and worry-free.</p><br><br>
+<p align=justify><font size=5> <strong><em>Flexibility and customization: </em></strong></font>With a driver, you can adjust your itinerary and the duration of stops based on your preferences, giving you the flexibility to explore attractions and activities at your own pace.</p><br><br>
+</div>
+
+<hr size=6 align=left noshade color=green>
+
+<br>
+
+<div class="option" onclick="toggleContent('option1')">
+    Option 3: No Included
+</div>
+
+<div id="option3" class="option-content">
+<p align=justify><font size=5> <strong><em>Cost savings:</em></strong></font> If you prefer specific transportation options or find local public transport more affordable, opting for a package without included transport can help you save money on travel costs.</p><br><br>
+<p align=justify><font size=5> <strong><em>Cultural immersion:</em></strong></font>By using local transportation (like buses, trains, or subways), you get a more authentic experience of the local culture and everyday life.</p><br><br>
+<p align=justify><font size=5> <strong><em>Freedom of choice:</em></strong></font>You have the freedom to choose different transportation options based on your current situation, avoiding the use of inconvenient or unsuitable travel methods.</p><br><br>
+<p align=justify><font size=5> <strong><em>Customized itinerary:</em></strong></font>Without pre-arranged transport, you have the freedom to plan your activities and travel routes based on your interests and time, adding more flexibility to your trip.</p><br><br>
+<p align=justify><font size=5> <strong><em>Less reliance on group arrangements: </em></strong></font>If you prefer to travel independently, a package without transport included allows you to avoid group travel arrangements, giving you a sense of freedom and autonomy.</p><br><br>
+</div>
+
+<hr size=6 align=left noshade color=green>
+
+<br><br><br>
+
+
+<section class="Transport_HTML">
+
+<div class="transport">
+    <div class="transportimage">
+        <img src="transport1.jpg" alt="Home">
+            <figcaption align="center">
+                <h2>Transport and Driver Included</h2>
+            </figcaption>
+    </div>
+    
+    <div class="transportimage">
+        <img src="transport2.jpg" alt="Home">
+        <figcaption align="center">
+            <h2>Transport Included</h2>
+             </figcaption>
+    </div>
+    <div class="transportimage">
+        <img src="transport3.jpg" alt="Home">
+        <figcaption align="center">
+            <h2>No Included</h2>
+        </figcaption>
+    </div>
+    </div>
+
+
+<div class="footer">
+    <h2>Quick Links</h2>
+    <ul class="footmenu">
+       <li><a href="home.html">Home</a></li>
+       <li><a href="about best.html">About us</a></li>
+       <li><a href="menu.html">Menu</a></li>
+       <li><a href="register.html">Register</a></li>
+       <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+ </div>
+ 
+<br><br><br>
+
+ <div class="footer">
+    <h2 >Information Link</h2>
+    <ul class="footmenu">
+       <li><a href="#">News</a></li>
+       <li><a href="#">R&D Policy</a></li>
+       <li><a href="#">Anti-Ragging</a></li>
+       <li><a href="#">Admission</a></li>
+    </ul>
+ </div>
+ <div class="footer">
+    <h2>GET IN TOUCH</h2>
+    <ul class="get-in-touch">
+       <li><i class="fa-solid fa-envelope"></i> E-MAIL:<a href="mailto:best@gmail.com" class="footer-e-mail"> japan@gmail.com</a></li>
+       <li><i class="fa-brands fa-whatsapp"></i> WHATS-APP: +91 -123 456 789</li>
+       <li><i class="fa-solid fa-phone"></i> CONTACT NO.: +91 -(123)-4567890</li>
+       <li><i class="fa-solid fa-globe"></i>WEBSITE:<a href="home.html" class="footer-website"> https://www.japan.com</a></li>
+    </ul>
+    <ul class="social-media">
+       <li><a href="#"><img src="fblogo.jpg"></a></li>
+       <li><a href="#"><img src="Twitterlogo.jpg"></a></li>
+       <li><a href="#"><img src="linelogo.jpg"></a></li>
+       <li><a href="#"><img src="instagramlogo.jpg"></a></li>
+    </ul>
+ </div>
+ </div>
+ </div>
+ <div class="footer2">
+ <p>Copyright @ 2024, japan.com. All Rights Reserved</p>
+ </div>
+ </body>
+ </html>
+
